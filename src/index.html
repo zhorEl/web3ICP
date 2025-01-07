@@ -1,14 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<!-- Previous head content remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zdblvd - Creative Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <!-- Previous styles remain the same -->
     <style>
-        /* Previous styles remain unchanged */
         .project-card:hover {
             transform: translateY(-5px);
             transition: transform 0.3s ease;
@@ -84,6 +82,7 @@
             }
         }
 
+        /* Floating animation for text */
         .float-animation {
             animation: float 6s ease-in-out infinite;
         }
@@ -96,29 +95,71 @@
                 transform: translateY(-20px);
             }
         }
-
-        /* New styles for skill icons */
-        .skill-icon {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-icon:hover {
-            transform: scale(1.1);
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <!-- Previous header content remains the same -->
+    <!-- Header with Animated Jumbotron -->
     <header class="jumbotron">
-        <!-- Previous header content -->
+        <div class="animated-bg"></div>
+        <div class="content-wrapper">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="text-3xl font-bold">zdblvd</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#work" class="hover:text-purple-400">Work</a>
+                        <a href="#skills" class="hover:text-purple-400">Skills</a>
+                        <a href="#contact" class="hover:text-purple-400">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="container mx-auto px-6 py-32 text-center">
+                <div class="float-animation">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-8">Creative Developer</h1>
+                    <p class="text-xl text-gray-300 mb-12">Bringing ideas to life through design and development</p>
+                    <a href="#contact" class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition duration-300">Let's Work Together</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Previous work section remains the same -->
+    <!-- Rest of the content remains the same -->
+    <!-- Work Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Featured Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <div class="project-card bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Graphics Design Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Graphics Design</h3>
+                        <p class="text-gray-400">Brand identity and visual design projects</p>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Motion Graphics Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Motion Graphics</h3>
+                        <p class="text-gray-400">Animated visual experiences</p>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Web Development Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                        <p class="text-gray-400">Responsive and interactive websites</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     
-    <!-- Updated Skills Section with Flat Icons -->
+
     <section id="skills" class="py-20 bg-gray-800">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-16 text-center">Skills</h2>
@@ -170,7 +211,34 @@
         </div>
     </section>
 
-    <!-- Previous contact section and footer remain the same -->
+    
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Let's Create Something Amazing</h2>
+            <p class="text-xl text-gray-300 mb-12">Have a project in mind? Let's discuss how we can work together.</p>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-6">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+                </div>
+                <button class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2025 zdblvd. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
