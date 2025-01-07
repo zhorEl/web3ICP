@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head content remains the same -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zdblvd - Creative Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Previous styles remain the same -->
+    <style>
+        /* Previous styles remain unchanged */
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+        
+        /* Animated Background Styles */
+        .jumbotron {
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #3b1d67 0%, #1a1a1a 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .animated-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(126, 87, 194, 0.1),
+                rgba(49, 27, 146, 0.1),
+                rgba(126, 87, 194, 0.1));
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to bottom,
+                rgba(26, 26, 26, 0.3),
+                rgba(26, 26, 26, 0.6));
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* New styles for skill icons */
+        .skill-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Previous header content remains the same -->
+    <header class="jumbotron">
+        <!-- Previous header content -->
+    </header>
+
+    <!-- Previous work section remains the same -->
+    
+    <!-- Updated Skills Section with Flat Icons -->
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Graphics Design Skill -->
+                <div class="text-center">
+                    <div class="skill-icon mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-16 h-16 text-purple-400 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Graphics Design</h3>
+                    <p class="text-gray-400">Adobe Creative Suite, Brand Design, UI/UX</p>
+                </div>
+
+                <!-- Motion Graphics Skill -->
+                <div class="text-center">
+                    <div class="skill-icon mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-16 h-16 text-purple-400 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Motion Graphics</h3>
+                    <p class="text-gray-400">After Effects, Cinema 4D, Animation</p>
+                </div>
+
+                <!-- Web Development Skill -->
+                <div class="text-center">
+                    <div class="skill-icon mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-16 h-16 text-purple-400 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                    <p class="text-gray-400">HTML, CSS, JavaScript, React</p>
+                </div>
+
+                <!-- Full Stack Skill -->
+                <div class="text-center">
+                    <div class="skill-icon mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-16 h-16 text-purple-400 mx-auto">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Full Stack</h3>
+                    <p class="text-gray-400">Node.js, Python, Mobile Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous contact section and footer remain the same -->
+
+</body>
+</html>
